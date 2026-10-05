@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,9 +10,9 @@
 
 <style>
 
-/* =========================
+/* =====================================================
    GENERAL PAGE
-========================= */
+===================================================== */
 
 * {
     box-sizing: border-box;
@@ -24,8 +26,15 @@ body {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
     color: white;
+
     background:
-        radial-gradient(circle at top, #4b176d 0%, #1a0929 45%, #07030d 100%);
+        radial-gradient(
+            circle at top,
+            #4b176d 0%,
+            #1a0929 45%,
+            #07030d 100%
+        );
+
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -43,27 +52,32 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    LOCKED SCREEN
-========================= */
+===================================================== */
 
 #lockedScreen {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .lock-box {
     width: 100%;
     max-width: 700px;
     padding: 45px 30px;
+
     border: 1px solid rgba(210, 150, 255, 0.35);
     border-radius: 25px;
+
     background: rgba(15, 5, 25, 0.72);
+
     box-shadow:
         0 0 30px rgba(160, 70, 255, 0.2),
         inset 0 0 25px rgba(255, 255, 255, 0.03);
+
     backdrop-filter: blur(10px);
 }
 
@@ -102,7 +116,9 @@ body {
 .time-box {
     min-width: 100px;
     padding: 20px 12px;
+
     border-radius: 16px;
+
     background: rgba(93, 37, 125, 0.35);
     border: 1px solid rgba(220, 160, 255, 0.3);
 }
@@ -120,15 +136,18 @@ body {
 }
 
 
-/* =========================
-   UNLOCK ANIMATION
-========================= */
+/* =====================================================
+   UNLOCK SCREEN
+===================================================== */
 
 #unlockScreen {
     min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    text-align: center;
 }
 
 .unlock-text {
@@ -137,9 +156,13 @@ body {
 
 .unlock-text h1 {
     font-size: clamp(35px, 8vw, 75px);
+
     letter-spacing: 7px;
+
     color: #e8c7ff;
-    text-shadow: 0 0 30px #a946ff;
+
+    text-shadow:
+        0 0 30px #a946ff;
 }
 
 .unlock-text p {
@@ -148,6 +171,7 @@ body {
 }
 
 @keyframes unlockAppear {
+
     0% {
         opacity: 0;
         transform: scale(0.7);
@@ -162,18 +186,20 @@ body {
         opacity: 1;
         transform: scale(1);
     }
+
 }
 
 
-/* =========================
+/* =====================================================
    MAIN BIRTHDAY PAGE
-========================= */
+===================================================== */
 
 #birthdayPage {
     animation: pageAppear 1.5s ease;
 }
 
 @keyframes pageAppear {
+
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -183,6 +209,7 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 .hero {
@@ -195,9 +222,13 @@ body {
 
 .hero h1 {
     font-size: clamp(38px, 8vw, 75px);
+
     margin: 15px 0;
+
     color: #f0d8ff;
-    text-shadow: 0 0 25px rgba(211, 115, 255, 0.8);
+
+    text-shadow:
+        0 0 25px rgba(211, 115, 255, 0.8);
 }
 
 .hero p {
@@ -205,18 +236,27 @@ body {
     color: #d8bddf;
 }
 
+.personal-name {
+    color: #f2bfff;
+}
 
-/* =========================
+
+/* =====================================================
    SECTIONS
-========================= */
+===================================================== */
 
 .section {
     margin: 35px 0;
     padding: 35px 25px;
+
     border-radius: 25px;
+
     background: rgba(18, 6, 29, 0.7);
+
     border: 1px solid rgba(206, 145, 255, 0.22);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.25);
 }
 
 .section h2 {
@@ -231,9 +271,9 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    BIRTHDAY MESSAGE
-========================= */
+===================================================== */
 
 .message {
     font-size: 19px;
@@ -241,18 +281,16 @@ body {
     color: #eee1f4;
 }
 
-.personal-name {
-    color: #f2bfff;
-}
 
-
-/* =========================
+/* =====================================================
    SONG
-========================= */
+===================================================== */
 
 .song-box {
     padding: 25px;
+
     border-radius: 20px;
+
     background: rgba(90, 40, 120, 0.18);
 }
 
@@ -261,30 +299,38 @@ body {
     margin-bottom: 10px;
 }
 
-audio {
-    width: 100%;
-    max-width: 600px;
+.song-box iframe {
     margin-top: 20px;
+    border-radius: 12px;
 }
 
 
-/* =========================
+/* =====================================================
    MEMORY VAULT
-========================= */
+===================================================== */
 
 .memory-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 25px;
+
     margin-top: 30px;
 }
 
 .memory-card {
     background: #f4eee5;
+
     color: #24142c;
+
     padding: 12px 12px 20px;
+
     transform: rotate(-1deg);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.35);
+
     transition: 0.3s;
 }
 
@@ -299,29 +345,42 @@ audio {
 .memory-card img {
     width: 100%;
     height: 250px;
+
     object-fit: cover;
+
     background: #d8c9df;
 }
 
 .memory-card p {
     margin: 15px 5px 0;
-    font-family: "Comic Sans MS", cursive;
+
+    font-family:
+        "Comic Sans MS",
+        cursive;
 }
 
 
-/* =========================
-   LETTER
-========================= */
+/* =====================================================
+   SECRET LETTER
+===================================================== */
 
 .envelope {
     width: 220px;
     height: 145px;
+
     margin: 35px auto 20px;
+
     background: #5b2377;
+
     border-radius: 8px;
+
     position: relative;
+
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.35);
+
     transition: 0.3s;
 }
 
@@ -331,9 +390,12 @@ audio {
 
 .envelope:before {
     content: "";
+
     position: absolute;
+
     top: 0;
     left: 0;
+
     border-left: 110px solid transparent;
     border-right: 110px solid transparent;
     border-top: 80px solid #78349a;
@@ -341,29 +403,43 @@ audio {
 
 .envelope-label {
     position: absolute;
+
     bottom: 20px;
+
     width: 100%;
+
     font-size: 20px;
+
     letter-spacing: 2px;
 }
 
 .letter-content {
     display: none;
+
     margin-top: 25px;
+
     padding: 30px;
+
     background: #f5eee3;
+
     color: #27152d;
+
     border-radius: 10px;
+
     line-height: 1.8;
+
     text-align: left;
 }
 
 .letter-content.show {
     display: block;
-    animation: letterOpen 0.8s ease;
+
+    animation:
+        letterOpen 0.8s ease;
 }
 
 @keyframes letterOpen {
+
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -373,174 +449,418 @@ audio {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 
-/* =========================
-   MYSTERY GIFTS
-========================= */
-
-.gifts {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.gift {
-    padding: 30px 15px;
-    border-radius: 20px;
-    background: linear-gradient(145deg, #5a2476, #281037);
-    border: 1px solid rgba(224, 172, 255, 0.25);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.gift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(180, 80, 255, 0.25);
-}
-
-.gift-icon {
-    font-size: 50px;
-}
-
-.gift h3 {
-    color: #e6c4f7;
-}
-
-.gift-result {
-    margin-top: 12px;
-    color: #d8bde5;
-    min-height: 25px;
-}
-
-
-/* =========================
-   PUZZLE
-========================= */
-
-.puzzle-box {
-    max-width: 650px;
-    margin: auto;
-}
-
-.puzzle-question {
-    font-size: 21px;
-    line-height: 1.7;
-}
-
-.puzzle-input {
-    width: 80%;
-    max-width: 400px;
-    padding: 15px;
-    border-radius: 12px;
-    border: 1px solid #b36bdd;
-    background: rgba(0,0,0,0.3);
-    color: white;
-    text-align: center;
-    font-size: 17px;
-}
+/* =====================================================
+   BUTTONS
+===================================================== */
 
 button {
     margin-top: 15px;
+
     padding: 13px 25px;
+
     border: none;
+
     border-radius: 25px;
-    background: linear-gradient(90deg, #7629a3, #a84bd0);
+
+    background:
+        linear-gradient(
+            90deg,
+            #7629a3,
+            #a84bd0
+        );
+
     color: white;
+
     font-size: 16px;
+
     cursor: pointer;
+
     transition: 0.3s;
 }
 
 button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(206, 112, 255, 0.4);
+
+    box-shadow:
+        0 0 20px rgba(206, 112, 255, 0.4);
 }
 
-#puzzleResult {
-    margin-top: 20px;
+
+/* =====================================================
+   PUZZLE
+===================================================== */
+
+.puzzle-box {
+    max-width: 750px;
+
+    margin: 30px auto;
+
+    padding: 30px 25px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #120b1c,
+            #08060b
+        );
+
+    border:
+        1px solid #6b21a8;
+
+    box-shadow:
+        0 0 25px rgba(107, 33, 168, 0.25);
+}
+
+.puzzle-text {
+    color: #d8d0df;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+.puzzle-question {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #c084fc;
+
+    margin: 25px 0 10px;
+}
+
+.puzzle-instruction {
+    margin-top: 30px;
+
+    color: #aaa;
+
+    font-size: 15px;
+}
+
+.puzzle-instruction strong {
+    color: #f87171;
+}
+
+.answer-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+.answer-buttons button {
+    padding: 13px 35px;
+
+    border: 1px solid #a855f7;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.answer-buttons button:hover {
+    background: #6b21a8;
+
+    transform: scale(1.05);
+}
+
+.puzzle-result {
+    margin-top: 30px;
+}
+
+.correct-answer {
+    padding: 25px;
+
+    border: 1px solid #a855f7;
+
+    border-radius: 15px;
+
+    background:
+        rgba(168, 85, 247, 0.08);
+}
+
+.wrong-answer {
+    padding: 25px;
+
+    border: 1px solid #7f1d1d;
+
+    border-radius: 15px;
+
+    background:
+        rgba(127, 29, 29, 0.08);
+}
+
+.result-icon {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.correct-answer .result-icon {
+    color: #c084fc;
+}
+
+.wrong-answer .result-icon {
+    color: #f87171;
+}
+
+.correct-answer h3,
+.wrong-answer h3 {
+    font-size: 23px;
+
+    letter-spacing: 2px;
+
+    color: white;
+}
+
+.correct-answer p,
+.wrong-answer p {
+    color: #ccc;
+
+    line-height: 1.7;
+}
+
+.correct-answer strong {
+    color: #c084fc;
+}
+
+.result-line {
+    width: 60%;
+
+    height: 1px;
+
+    background: #6b21a8;
+
+    margin: 20px auto;
+}
+
+.result-final {
+    color: #c084fc !important;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   100 FREE PASSES
+===================================================== */
+
+#finalSurprise {
+    display: none;
+
+    margin-top: 35px;
+
+    animation:
+        finalReveal 1.5s ease;
+}
+
+#finalSurprise.show {
+    display: block;
+}
+
+.final-surprise {
+    padding: 40px 25px;
+
+    border: 2px solid #a855f7;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #160d24,
+            #09070d
+        );
+
+    box-shadow:
+        0 0 35px rgba(168, 85, 247, 0.3);
+
+    text-align: center;
+}
+
+.pass-number {
+    font-size: 90px;
+
+    font-weight: 900;
+
+    color: #c084fc;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 25px rgba(192, 132, 252, 0.7);
+}
+
+.final-surprise h4 {
+    margin: 15px 0 25px;
+
+    font-size: 26px;
+
+    letter-spacing: 5px;
+
+    color: #f87171;
+}
+
+.pass-main {
+    color: #ddd;
+
     font-size: 18px;
 }
 
+.final-surprise h3 {
+    font-size: 32px;
 
-/* =========================
-   FINAL SURPRISE
-========================= */
+    margin: 15px 0;
 
-.final-section {
-    padding: 55px 25px;
+    color: white;
+
+    letter-spacing: 2px;
 }
 
-.final-button {
-    font-size: 20px;
-    padding: 18px 35px;
+.pass-description {
+    font-size: 19px;
+
+    color: #e9d5ff;
+}
+
+.pass-description strong {
+    color: #f87171;
+}
+
+.pass-small {
+    margin-top: 22px;
+
+    line-height: 1.9;
+
+    color: #bdb4c8;
+}
+
+.pass-divider {
+    width: 70%;
+
+    height: 1px;
+
+    margin: 25px auto;
+
+    background: #6b21a8;
+}
+
+.pass-ending {
+    color: #c084fc;
+
+    font-style: italic;
+
+    font-size: 18px;
+}
+
+.pass-signature {
     margin-top: 20px;
+
+    color: #777;
+
+    font-size: 13px;
 }
 
-.final-message {
-    display: none;
-    margin-top: 35px;
-    font-size: 24px;
-    line-height: 1.7;
-    color: #f0cfff;
-}
 
-.final-message.show {
-    display: block;
-    animation: finalReveal 1.5s ease;
-}
+/* =====================================================
+   FINAL REVEAL ANIMATION
+===================================================== */
 
 @keyframes finalReveal {
+
     from {
         opacity: 0;
-        transform: scale(0.8);
+
+        transform:
+            scale(0.75)
+            translateY(30px);
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+
+        transform:
+            scale(1)
+            translateY(0);
     }
+
 }
 
 
-/* =========================
+/* =====================================================
    FALLING HEARTS
-========================= */
+===================================================== */
 
 .heart {
     position: fixed;
+
     top: -30px;
+
     font-size: 22px;
+
     pointer-events: none;
-    animation: fall linear forwards;
+
+    animation:
+        fall linear forwards;
+
     z-index: 999;
 }
 
 @keyframes fall {
+
     to {
-        transform: translateY(110vh) rotate(360deg);
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
         opacity: 0;
     }
+
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
     margin-top: 50px;
+
     color: #765c82;
+
     font-size: 13px;
+
     letter-spacing: 1px;
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media (max-width: 650px) {
 
@@ -550,6 +870,7 @@ footer {
 
     .time-box {
         min-width: 75px;
+
         padding: 15px 8px;
     }
 
@@ -561,10 +882,6 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .gifts {
-        grid-template-columns: 1fr;
-    }
-
     .section {
         padding: 30px 18px;
     }
@@ -572,9 +889,24 @@ footer {
     .hero {
         padding-top: 45px;
     }
+
+    .pass-number {
+        font-size: 70px;
+    }
+
+    .final-surprise h3 {
+        font-size: 25px;
+    }
+
+    .final-surprise h4 {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+
 }
 
 </style>
+
 </head>
 
 
@@ -597,7 +929,9 @@ footer {
             🔐
         </div>
 
-        <h1>ACCESS DENIED</h1>
+        <h1>
+            ACCESS DENIED
+        </h1>
 
         <p class="access-denied">
             This file cannot be opened yet.
@@ -650,9 +984,13 @@ footer {
             🔓
         </div>
 
-        <h1>ACCESS GRANTED</h1>
+        <h1>
+            ACCESS GRANTED
+        </h1>
 
-        <p>THE BIRTHDAY FILE HAS BEEN UNLOCKED.</p>
+        <p>
+            THE BIRTHDAY FILE HAS BEEN UNLOCKED.
+        </p>
 
     </div>
 
@@ -669,131 +1007,89 @@ footer {
 <div class="container">
 
 
-    <!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="classified">
-            CLASSIFIED FILE #001
-        </div>
+    <div class="classified">
+        CLASSIFIED FILE #001
+    </div>
 
-        <h1>HAPPY BIRTHDAY</h1>
+    <h1>
+        HAPPY BIRTHDAY
+    </h1>
 
-        <!-- PERSONAL NAME GOES HERE -->
-        <h2 class="personal-name">
-            [NAME]
-        </h2>
+    <h2 class="personal-name">
+        [NAME]
+    </h2>
 
-        <p>
-            The file you've been waiting for is finally open.
-        </p>
+    <p>
+        The file you've been waiting for is finally open.
+    </p>
 
-    </section>
-
-
-
-    <!-- =================================================
-         PERSONAL BIRTHDAY MESSAGE
-    ================================================= -->
-
-    <section class="section">
-
-        <h2>💜 A MESSAGE FOR YOU</h2>
-
-        <p class="message">
-
-            <!-- WRITE YOUR PERSONAL BIRTHDAY MESSAGE HERE -->
-
-            [WRITE YOUR PERSONAL BIRTHDAY MESSAGE HERE.]
-
-        </p>
-
-    </section>
-
-
-
-    <!-- =================================================
-         SONG — BEFORE MEMORIES
-    ================================================= -->
-<section class="section">
-  <h2>🎵 FIRST: PRESS PLAY</h2>
-  <p class="section-subtitle">
-    Before we get to the memories...
-  </p>
-
-  <div class="song-box">
-    <div class="song-icon">🎧</div>
-
-    <h3>Sila</h3>
-    <p>Abdul Hannan & Murtaza Qizilbash</p>
-
-    <iframe
-      src="https://open.spotify.com/embed/track/4UKjQODokAfEMaTgvTHbVX?utm_source=generator"
-      width="100%"
-      height="152"
-      frameborder="0"
-      allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
-  </div>
 </section>
 
 
 
-   <!-- =================================================
-     MEMORY VAULT — 8 PHOTOS
-================================================= -->
+<!-- =====================================================
+     PERSONAL MESSAGE
+===================================================== -->
 
 <section class="section">
 
-    <h2>📸 MEMORY VAULT</h2>
+    <h2>
+        💜 A MESSAGE FOR YOU
+    </h2>
 
-    <p class="section-subtitle">
-        Some moments worth keeping forever.
+    <p class="message">
+
+        [WRITE YOUR PERSONAL BIRTHDAY MESSAGE HERE.]
+
     </p>
 
-    <div class="memory-grid">
+</section>
 
-        <div class="memory-card">
-            <img src="photo1.jpg" alt="Memory 1">
-            <p>[MEMORY CAPTION]</p>
+
+
+<!-- =====================================================
+     SONG
+===================================================== -->
+
+<section class="section">
+
+    <h2>
+        🎵 FIRST: PRESS PLAY
+    </h2>
+
+    <p class="section-subtitle">
+        Before we get to the memories...
+    </p>
+
+    <div class="song-box">
+
+        <div class="song-icon">
+            🎧
         </div>
 
-        <div class="memory-card">
-            <img src="photo2.jpg" alt="Memory 2">
-            <p>[MEMORY CAPTION]</p>
-        </div>
+        <h3>
+            Sila
+        </h3>
 
-        <div class="memory-card">
-            <img src="photo3.jpg" alt="Memory 3">
-            <p>[MEMORY CAPTION]</p>
-        </div>
+        <p>
+            Abdul Hannan & Murtaza Qizilbash
+        </p>
 
-        <div class="memory-card">
-            <img src="photo4.jpg" alt="Memory 4">
-            <p>[MEMORY CAPTION]</p>
-        </div>
-
-        <div class="memory-card">
-            <img src="photo5.jpg" alt="Memory 5">
-            <p>[MEMORY CAPTION]</p>
-        </div>
-
-        <div class="memory-card">
-            <img src="photo6.jpg" alt="Memory 6">
-            <p>[MEMORY CAPTION]</p>
-        </div>
-
-        <div class="memory-card">
-            <img src="photo7.jpg" alt="Memory 7">
-            <p>[MEMORY CAPTION]</p>
-        </div>
-
-        <div class="memory-card">
-            <img src="photo8.jpg" alt="Memory 8">
-            <p>[MEMORY CAPTION]</p>
-        </div>
+        <iframe
+            src="https://open.spotify.com/embed/track/4UKjQODokAfEMaTgvTHbVX?utm_source=generator"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
 
     </div>
 
@@ -801,240 +1097,364 @@ footer {
 
 
 
-    <!-- =================================================
-         SECRET LETTER
-    ================================================= -->
+<!-- =====================================================
+     MEMORY VAULT — 8 PHOTOS
+===================================================== -->
 
-    <section class="section">
+<section class="section">
 
-        <h2>✉️ A SEALED MESSAGE</h2>
+    <h2>
+        📸 MEMORY VAULT
+    </h2>
 
-        <p class="section-subtitle">
-            Some things deserve to be opened slowly.
+    <p class="section-subtitle">
+        Some moments worth keeping forever.
+    </p>
+
+    <div class="memory-grid">
+
+
+        <div class="memory-card">
+
+            <img
+                src="photo1.jpg"
+                alt="Memory 1"
+            >
+
+            <p>
+                [MEMORY CAPTION]
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <img
+                src="photo2.jpg"
+                alt="Memory 2"
+            >
+
+            <p>
+                [MEMORY CAPTION]
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <img
+                src="photo3.jpg"
+                alt="Memory 3"
+            >
+
+            <p>
+                [MEMORY CAPTION]
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <img
+                src="photo4.jpg"
+                alt="Memory 4"
+            >
+
+            <p>
+                [MEMORY CAPTION]
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <img
+                src="photo5.jpg"
+                alt="Memory 5"
+            >
+
+            <p>
+                [MEMORY CAPTION]
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <img
+                src="photo6.jpg"
+                alt="Memory 6"
+            >
+
+            <p>
+                [MEMORY CAPTION]
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <img
+                src="photo7.jpg"
+                alt="Memory 7"
+            >
+
+            <p>
+                [MEMORY CAPTION]
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <img
+                src="photo8.jpg"
+                alt="Memory 8"
+            >
+
+            <p>
+                [MEMORY CAPTION]
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECRET LETTER
+===================================================== -->
+
+<section class="section">
+
+    <h2>
+        ✉️ A SEALED MESSAGE
+    </h2>
+
+    <p class="section-subtitle">
+        Some things deserve to be opened slowly.
+    </p>
+
+
+    <div
+        class="envelope"
+        onclick="openLetter()"
+    >
+
+        <div class="envelope-label">
+            OPEN ME
+        </div>
+
+    </div>
+
+
+    <div
+        id="letterContent"
+        class="letter-content"
+    >
+
+        <h3>
+            Dear [NAME],
+        </h3>
+
+        <p>
+            [WRITE YOUR PERSONAL LETTER HERE.]
         </p>
 
-
-        <div
-            class="envelope"
-            onclick="openLetter()"
-        >
-
-            <div class="envelope-label">
-                OPEN ME
-            </div>
-
-        </div>
-
-
-        <div
-            id="letterContent"
-            class="letter-content"
-        >
-
-            <!-- WRITE YOUR LETTER HERE -->
-
-            <h3>
-                Dear [NAME],
-            </h3>
-
-            <p>
-                [WRITE YOUR PERSONAL LETTER HERE.]
-            </p>
-
-            <p>
-                [ADD MORE HERE IF YOU WANT.]
-            </p>
-
-            <p>
-                From,
-                <br>
-                [YOUR NAME / NICKNAME]
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         MYSTERY GIFTS
-    ================================================= -->
-
-    <section class="section">
-
-        <h2>🎁 THREE MYSTERY FILES</h2>
-
-        <p class="section-subtitle">
-            You have no idea what's inside.
+        <p>
+            [ADD MORE HERE IF YOU WANT.]
         </p>
 
-
-        <div class="gifts">
-
-
-            <div
-                class="gift"
-                onclick="openGift(1)"
-            >
-
-                <div class="gift-icon">
-                    🎁
-                </div>
-
-                <h3>
-                    FILE 01
-                </h3>
-
-                <div
-                    id="gift1"
-                    class="gift-result"
-                >
-                </div>
-
-            </div>
-
-
-
-            <div
-                class="gift"
-                onclick="openGift(2)"
-            >
-
-                <div class="gift-icon">
-                    🎁
-                </div>
-
-                <h3>
-                    FILE 02
-                </h3>
-
-                <div
-                    id="gift2"
-                    class="gift-result"
-                >
-                </div>
-
-            </div>
-
-
-
-            <div
-                class="gift"
-                onclick="openGift(3)"
-            >
-
-                <div class="gift-icon">
-                    🎁
-                </div>
-
-                <h3>
-                    FILE 03
-                </h3>
-
-                <div
-                    id="gift3"
-                    class="gift-result"
-                >
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         SECRET PUZZLE
-    ================================================= -->
-
-    <section class="section">
-
-        <h2>🧩 CLASSIFIED PUZZLE</h2>
-
-        <div class="puzzle-box">
-
-            <p class="puzzle-question">
-
-                <!-- CHANGE THIS QUESTION LATER -->
-
-                [WRITE YOUR PERSONAL PUZZLE OR QUESTION HERE.]
-
-            </p>
-
-
-            <input
-                id="puzzleAnswer"
-                class="puzzle-input"
-                type="text"
-                placeholder="Enter your answer..."
-            >
-
-
+        <p>
+            From,
             <br>
+            [YOUR NAME / NICKNAME]
+        </p>
+
+    </div>
+
+</section>
 
 
-            <button onclick="checkPuzzle()">
-                SUBMIT ANSWER
+
+<!-- =====================================================
+     PUZZLE
+===================================================== -->
+
+<section class="section">
+
+    <h2>
+        🧩 ONE QUESTION
+    </h2>
+
+    <p class="section-subtitle">
+        Think carefully before you answer...
+    </p>
+
+
+    <div class="puzzle-box">
+
+
+        <p class="puzzle-text">
+
+            Even though I don't want it to be true,
+            this birthday card might be the last one
+            I can ever give you.
+
+        </p>
+
+
+        <p class="puzzle-text">
+
+            So, I have a question for you,
+            mystery aunty.
+
+        </p>
+
+
+        <p class="puzzle-question">
+            What do you think?
+        </p>
+
+
+        <p class="puzzle-text">
+
+            Will I be here for you every single day,
+            including your birthdays, your good days
+            as well as bad ones, and any other type
+            of day that exists?
+
+        </p>
+
+
+        <p class="puzzle-instruction">
+
+            Write <strong>YES</strong> or
+            <strong>NO</strong> to find out the
+            result of your puzzle.
+
+        </p>
+
+
+        <div class="answer-buttons">
+
+            <button onclick="answerPuzzle('yes')">
+                YES
             </button>
 
-
-            <div id="puzzleResult">
-            </div>
+            <button onclick="answerPuzzle('no')">
+                NO
+            </button>
 
         </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         FINAL SURPRISE
-    ================================================= -->
-
-    <section class="section final-section">
-
-        <h2>
-            ⚠️ FINAL FILE
-        </h2>
-
-        <p>
-            You have reached the end...
-        </p>
-
-        <p>
-            But there is still one thing left.
-        </p>
-
-
-        <button
-            class="final-button"
-            onclick="finalSurprise()"
-        >
-            OPEN FINAL SURPRISE
-        </button>
 
 
         <div
-            id="finalMessage"
-            class="final-message"
-        >
-
-            <!-- FINAL MESSAGE -->
-
-            ✨ [WRITE YOUR FINAL SURPRISE HERE.] ✨
-
+            id="puzzleResult"
+            class="puzzle-result">
         </div>
 
-    </section>
+
+    </div>
+
+</section>
 
 
 
-    <footer>
-        END OF CLASSIFIED FILE
-    </footer>
+<!-- =====================================================
+     FINAL SURPRISE — HIDDEN UNTIL YES
+===================================================== -->
+
+<section
+    class="section"
+    id="finalSurprise"
+>
+
+    <div class="final-surprise">
+
+
+        <div class="pass-number">
+            100
+        </div>
+
+
+        <h4>
+            ✨ FREE PASSES ✨
+        </h4>
+
+
+        <p class="pass-main">
+
+            You have officially unlocked...
+
+        </p>
+
+
+        <h3>
+            100 FREE PASSES
+        </h3>
+
+
+        <p class="pass-description">
+
+            Each pass can be used for
+            <strong>ANYTHING YOU WANT.</strong>
+
+        </p>
+
+
+        <p class="pass-small">
+
+            No questions asked.
+            <br>
+
+            No explanations needed.
+            <br>
+
+            Just show me a pass and make your request.
+
+        </p>
+
+
+        <div class="pass-divider"></div>
+
+
+        <p class="pass-ending">
+
+            Use them wisely... or don't. 😌
+
+        </p>
+
+
+        <p class="pass-signature">
+
+            — Your personal 100-pass privilege
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    CLASSIFIED BIRTHDAY FILE • ACCESS GRANTED
+
+</footer>
 
 
 </div>
@@ -1042,20 +1462,22 @@ footer {
 </div>
 
 
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
 
 
 /* =====================================================
    BIRTHDAY DATE
-
-   October 22, 2026
-   12:00 AM
-   Bangladesh Time (UTC +6)
 ===================================================== */
 
 const birthday =
-    new Date("2026-10-22T00:00:00+06:00").getTime();
+    new Date(
+        "2026-10-5T00:00:00+06:00"
+    ).getTime();
 
 
 let birthdayUnlocked = false;
@@ -1068,9 +1490,11 @@ let birthdayUnlocked = false;
 
 function updateCountdown() {
 
-    const now = new Date().getTime();
+    const now =
+        new Date().getTime();
 
-    const distance = birthday - now;
+    const distance =
+        birthday - now;
 
 
     if (distance <= 0) {
@@ -1084,14 +1508,17 @@ function updateCountdown() {
 
     const days =
         Math.floor(
-            distance / (1000 * 60 * 60 * 24)
+            distance /
+            (1000 * 60 * 60 * 24)
         );
 
 
     const hours =
         Math.floor(
-            (distance %
-                (1000 * 60 * 60 * 24))
+            (
+                distance %
+                (1000 * 60 * 60 * 24)
+            )
             /
             (1000 * 60 * 60)
         );
@@ -1099,8 +1526,10 @@ function updateCountdown() {
 
     const minutes =
         Math.floor(
-            (distance %
-                (1000 * 60 * 60))
+            (
+                distance %
+                (1000 * 60 * 60)
+            )
             /
             (1000 * 60)
         );
@@ -1108,39 +1537,48 @@ function updateCountdown() {
 
     const seconds =
         Math.floor(
-            (distance %
-                (1000 * 60))
+            (
+                distance %
+                (1000 * 60)
+            )
             /
             1000
         );
 
 
-    document.getElementById("days").textContent =
+    document.getElementById("days")
+        .textContent =
         String(days).padStart(2, "0");
 
 
-    document.getElementById("hours").textContent =
+    document.getElementById("hours")
+        .textContent =
         String(hours).padStart(2, "0");
 
 
-    document.getElementById("minutes").textContent =
+    document.getElementById("minutes")
+        .textContent =
         String(minutes).padStart(2, "0");
 
 
-    document.getElementById("seconds").textContent =
+    document.getElementById("seconds")
+        .textContent =
         String(seconds).padStart(2, "0");
 
 }
 
 
-setInterval(updateCountdown, 1000);
+setInterval(
+    updateCountdown,
+    1000
+);
 
 updateCountdown();
 
 
 
 /* =====================================================
-   UNLOCK
+   UNLOCK BIRTHDAY
 ===================================================== */
 
 function unlockBirthday() {
@@ -1194,34 +1632,54 @@ function createHearts() {
             document.createElement("div");
 
 
-        heart.className = "heart";
+        heart.className =
+            "heart";
 
 
         const hearts =
-            ["💜", "💗", "✨", "♡", "♥"];
+            [
+                "💜",
+                "💗",
+                "✨",
+                "♡",
+                "♥"
+            ];
 
 
         heart.textContent =
             hearts[
                 Math.floor(
-                    Math.random() * hearts.length
+                    Math.random() *
+                    hearts.length
                 )
             ];
 
 
         heart.style.left =
-            Math.random() * 100 + "vw";
+            Math.random() *
+            100 +
+            "vw";
 
 
         heart.style.animationDuration =
-            (3 + Math.random() * 4) + "s";
+            (
+                3 +
+                Math.random() * 4
+            ) +
+            "s";
 
 
         heart.style.fontSize =
-            (15 + Math.random() * 20) + "px";
+            (
+                15 +
+                Math.random() * 20
+            ) +
+            "px";
 
 
-        document.body.appendChild(heart);
+        document.body.appendChild(
+            heart
+        );
 
 
         setTimeout(() => {
@@ -1244,49 +1702,14 @@ function createHearts() {
 function openLetter() {
 
     const letter =
-        document.getElementById("letterContent");
-
-
-    letter.classList.toggle("show");
-
-}
-
-
-
-/* =====================================================
-   MYSTERY GIFTS
-===================================================== */
-
-function openGift(number) {
-
-    const result =
         document.getElementById(
-            "gift" + number
+            "letterContent"
         );
 
 
-    if (number === 1) {
-
-        result.textContent =
-            "[PUT YOUR FIRST SURPRISE HERE]";
-
-    }
-
-
-    if (number === 2) {
-
-        result.textContent =
-            "[PUT YOUR SECOND SURPRISE HERE]";
-
-    }
-
-
-    if (number === 3) {
-
-        result.textContent =
-            "[PUT YOUR THIRD SURPRISE HERE]";
-
-    }
+    letter.classList.toggle(
+        "show"
+    );
 
 }
 
@@ -1296,15 +1719,7 @@ function openGift(number) {
    PUZZLE
 ===================================================== */
 
-function checkPuzzle() {
-
-    const answer =
-        document
-            .getElementById("puzzleAnswer")
-            .value
-            .trim()
-            .toLowerCase();
-
+function answerPuzzle(answer) {
 
     const result =
         document.getElementById(
@@ -1312,50 +1727,106 @@ function checkPuzzle() {
         );
 
 
-    /*
-       CHANGE THE CORRECT ANSWER HERE.
-
-       Example:
-
-       if (answer === "purple") {
-
-    */
+    if (answer === "yes") {
 
 
-    if (answer === "[YOUR ANSWER]") {
+        result.innerHTML = `
 
-        result.textContent =
-            "✨ Correct! You found the secret. ✨";
+            <div class="correct-answer">
+
+                <div class="result-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    YOU'RE RIGHT.
+                </h3>
+
+                <p>
+                    The answer is
+                    <strong>YES.</strong>
+                </p>
+
+                <p>
+                    No matter what kind of
+                    day it is, I'll be here.
+                </p>
+
+                <p>
+                    I will always be there for you
+                    and love you more with each
+                    passing day.
+                </p>
+
+                <div class="result-line"></div>
+
+                <p class="result-final">
+                    Puzzle complete.
+                </p>
+
+            </div>
+
+        `;
+
+
+        setTimeout(() => {
+
+            const final =
+                document.getElementById(
+                    "finalSurprise"
+                );
+
+
+            final.classList.add(
+                "show"
+            );
+
+
+            final.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+
+            createFinalConfetti();
+
+
+        }, 1200);
+
 
     }
 
     else {
 
-        result.textContent =
-            "❌ Not quite... try again.";
+
+        result.innerHTML = `
+
+            <div class="wrong-answer">
+
+                <div class="result-icon">
+                    ✕
+                </div>
+
+                <h3>
+                    TRY AGAIN.
+                </h3>
+
+                <p>
+                    I think you know the
+                    answer to this one...
+                </p>
+
+                <button
+                    onclick="answerPuzzle('yes')"
+                >
+                    TRY YES
+                </button>
+
+            </div>
+
+        `;
 
     }
-
-}
-
-
-
-/* =====================================================
-   FINAL SURPRISE
-===================================================== */
-
-function finalSurprise() {
-
-    const message =
-        document.getElementById(
-            "finalMessage"
-        );
-
-
-    message.classList.add("show");
-
-
-    createFinalConfetti();
 
 }
 
@@ -1374,14 +1845,23 @@ function createFinalConfetti() {
     ) {
 
         const piece =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
 
-        piece.className = "heart";
+        piece.className =
+            "heart";
 
 
         const symbols =
-            ["💜", "💗", "✨", "🎉", "★"];
+            [
+                "💜",
+                "💗",
+                "✨",
+                "🎉",
+                "★"
+            ];
 
 
         piece.textContent =
@@ -1394,18 +1874,28 @@ function createFinalConfetti() {
 
 
         piece.style.left =
-            Math.random() * 100 + "vw";
+            Math.random() *
+            100 +
+            "vw";
 
 
         piece.style.top =
-            Math.random() * 30 + "vh";
+            Math.random() *
+            30 +
+            "vh";
 
 
         piece.style.animationDuration =
-            (2 + Math.random() * 3) + "s";
+            (
+                2 +
+                Math.random() * 3
+            ) +
+            "s";
 
 
-        document.body.appendChild(piece);
+        document.body.appendChild(
+            piece
+        );
 
 
         setTimeout(() => {
@@ -1418,7 +1908,9 @@ function createFinalConfetti() {
 
 }
 
+
 </script>
 
 </body>
+
 </html>
